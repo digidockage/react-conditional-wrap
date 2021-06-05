@@ -3,7 +3,7 @@ A simple React component for wrapping children based on a condition.
 
 ### Install
 ```
-npm install conditional-wrap
+npm install @esultolabs/react-conditional-wrap
 ```
 
 ### Example
@@ -12,7 +12,7 @@ npm install conditional-wrap
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import ConditionalWrap from '../../src';
+import ConditionalWrap from '@esultolabs/react-conditional-wrap';
 
 const Demo = () => {
   const random = Math.random() < 0.5;
