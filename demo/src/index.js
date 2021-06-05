@@ -1,14 +1,3 @@
-# React conditional wrap
-A simple React component for wrapping children based on a condition.
-
-### Install
-```
-npm install conditional-wrap
-```
-
-### Example
-
-```js
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
@@ -32,4 +21,3 @@ const Demo = () => {
 }
 
 render(<Demo />, document.querySelector('#demo'));
-```
