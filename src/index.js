@@ -1,18 +1,33 @@
 import React from 'react';
 
-const emptyWrap = ({ children }) => {
+const defaultWrap = ({ children }) => {
+  return children;
+};
+
+const defaultChildren = (
+  <React.Fragment />
+);
+
+const ConditionalWrap = ({
+  when = false,
+  thenWrap = defaultWrap,
+  elseWrap = defaultWrap,
+  children = defaultChildren,
+  ...rest
+}) => {
   return (
     <React.Fragment>
-      { children }
+      {
+        React.Children.map(children, (child) => {
+          child = (rest) ? React.cloneElement(child, rest) : child;
+          if ( typeof when === 'function' && when({ ...rest, ...child.props }) || when === true) {
+            return thenWrap({ ...rest, ...child.props, children: child});
+          }
+          return elseWrap({ ...rest, ...child.props, children: child});
+        })
+      }
     </React.Fragment>
   );
 };
 
-const ConditionalWrap = ({ condition, wrapIfTrue, wrapIfFalse, children }) => {
-  wrapIfTrue = wrapIfTrue || emptyWrap;
-  wrapIfFalse = wrapIfFalse || emptyWrap;
-
-  return condition ? wrapIfTrue(children) : wrapIfFalse(children);
-}
-
-export default ConditionalWrap
+export default ConditionalWrap;
