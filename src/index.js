@@ -1,7 +1,7 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                                                                                                 *
- *    hassio-addon-alessio                                                                         *
- *    Copyright (c) 2022 Sgobbi Federico                                                           *
+ *    @digidockage/react-conditional-wrap                                                          *
+ *    Copyright (c) 2021 Sgobbi Federico                                                           *
  *    All rights reserved                                                                          *
  *                                                                                                 *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

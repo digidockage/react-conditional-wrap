@@ -1,8 +1,19 @@
-import React, { Component } from 'react';
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                                                                                 *
+ *    @digidockage/react-conditional-wrap                                                          *
+ *    Copyright (c) 2021 Sgobbi Federico                                                           *
+ *    All rights reserved                                                                          *
+ *                                                                                                 *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// > > > > > > > > > > > > > > > > > > > > > > > Import externals
+import React from 'react';
 import { render } from 'react-dom';
 
+// > > > > > > > > > > > > > > > > > > > > > > > Import internals
 import ConditionalWrap from '../../src';
 
+// > > > > > > > > > > > > > > > > > > > > > > > The code
 const ThenWrapComponent = ({ children }) => {
   return (
     <React.Fragment>
