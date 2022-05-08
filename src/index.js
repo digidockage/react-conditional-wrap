@@ -1,5 +1,15 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                                                                                 *
+ *    hassio-addon-alessio                                                                         *
+ *    Copyright (c) 2022 Sgobbi Federico                                                           *
+ *    All rights reserved                                                                          *
+ *                                                                                                 *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// > > > > > > > > > > > > > > > > > > > > > > > Import externals
 import React from 'react';
 
+// > > > > > > > > > > > > > > > > > > > > > > > The code
 const defaultWrap = ({ children }) => {
   return children;
 };
@@ -20,14 +30,15 @@ const ConditionalWrap = ({
       {
         React.Children.map(children, (child) => {
           child = (rest) ? React.cloneElement(child, rest) : child;
-          if ( typeof when === 'function' && when({ ...rest, ...child.props }) || when === true) {
-            return thenWrap({ ...rest, ...child.props, children: child});
+          if (typeof when === 'function' && when({ ...rest, ...child.props }) || when === true) {
+            return thenWrap({ ...rest, ...child.props, children: child });
           }
-          return elseWrap({ ...rest, ...child.props, children: child});
+          return elseWrap({ ...rest, ...child.props, children: child });
         })
       }
     </React.Fragment>
   );
 };
 
+// > > > > > > > > > > > > > > > > > > > > > > > Module exports
 export default ConditionalWrap;

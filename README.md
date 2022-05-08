@@ -3,7 +3,7 @@ A simple React component for wrapping children based on a condition.
 
 ### Install
 ```
-npm install @esultolabs/react-conditional-wrap
+npm install @digidockage/react-conditional-wrap
 ```
 
 ### Example
